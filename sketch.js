@@ -20,25 +20,45 @@ var answers =
 "Outlook not so good.",
 "Very doubtful."]
 
-let button, word;
+let word, txt, cnv;
 
 function setup() {
-  createCanvas(400, 400);
-  button = createButton('Ask an 8 ball!');
-  button.position(300, 300);
-  button.mousePressed(drawWord);
+  cnv = createCanvas(600, 600);
+  centerCanvas();
+  background(255, 255, 255);
+  fill(0,0,0);
+  ellipse(300, 300, 400, 400);
+  fill(255, 255, 255);
+  rectMode(CENTER);
+  rect(300, 300, 175, 50);
+}
+
+function centerCanvas() {
+  var x = (windowWidth - width) / 2;
+  var y = (windowHeight - height) / 2;
+  cnv.position(x, y);
 }
 
 function draw() {
-  background(220);
-  ellipse(200, 200, 200, 200);
-  text(word, 200, 200);
+  clear()
+  centerCanvas();
+  background(255, 255, 255);
+  fill(0,0,0);
+  ellipse(300, 300, 400, 400);
+  fill(255, 255, 255);
+  rectMode(CENTER);
+  rect(300, 300, 175, 50);
+  fill(0,0,0);
+  txt = text(word, 300, 300);
+}
+
+function mousePressed() {
+  drawWord()
 }
 
 function drawWord() {
   textAlign(CENTER);
   word = random(answers)
-  text(word, 200, 200);
 }
 
 function random(array) {
