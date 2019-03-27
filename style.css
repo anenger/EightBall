@@ -1,0 +1,72 @@
+@keyframes fade-in {
+	0% {opacity: 0}
+	100% {opacity: 1}
+}
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+html {
+  scroll-behavior: smooth;
+}
+img {
+	text-decoration: none;
+	border-radius: 5px;
+    max-width: 200px;
+}
+header {
+	background: transparent;
+	margin-top: 5vh;
+    display: block;
+    text-align: center;
+}
+h1 {
+	font-size: 44pt;
+}
+body {
+    background-image: url("background.png");
+    background-size: cover;
+    animation-name: fade-in;
+    animation-duration: 2s;
+    font-family: 'Helvetica';
+    color: white;
+    overflow-y: visible;
+}
+p {
+    display: inline-block;
+}
+div {
+	text-align: center;
+	align-content: center;
+  margin: auto;
+}
+a {
+	color: white;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+a:any-link {
+  text-decoration: none;
+}
+a:-webkit-any-link {
+  text-decoration: none;
+}
+
+h2 {
+  text-decoration: underline;
+}
+
+h3 {
+  margin: 5px 0px 5px 0px;
+}
+
+ul {
+  display: inline-block;
+  text-align:left;
+}
+
+li{
+  margin: 10px 0;
+}
