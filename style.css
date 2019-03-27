@@ -8,6 +8,9 @@
 }
 html {
   scroll-behavior: smooth;
+  margin: 0; 
+  height: 100%; 
+  overflow: hidden;
 }
 img {
 	text-decoration: none;
@@ -31,6 +34,9 @@ body {
     font-family: 'Helvetica';
     color: white;
     overflow-y: visible;
+    margin: 0; 
+    height: 100%; 
+    overflow: hidden;
 }
 p {
     display: inline-block;
