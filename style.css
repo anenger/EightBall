@@ -27,7 +27,6 @@ h1 {
 	font-size: 44pt;
 }
 body {
-    background-image: url("background.png");
     background-size: cover;
     animation-name: fade-in;
     animation-duration: 2s;

@@ -18,13 +18,17 @@ var answers =
 "My reply is no.",
 "My sources say no.",
 "Outlook not so good.",
-"Very doubtful."]
+"Very doubtful.",
+"You should probably ask Mob...",
+"Jebron"]
 
-let word, txt, cnv;
+let word, txt, cnv, video;
 
 function setup() {
   cnv = createCanvas(600, 600);
   centerCanvas();
+  video = createVideo(['jebron.mov'])
+  video.hide()
   background(255, 255, 255);
   fill(0,0,0);
   ellipse(300, 300, 400, 400);
@@ -50,6 +54,14 @@ function draw() {
   rect(300, 300, 175, 50);
   fill(0,0,0);
   txt = text(word, 300, 300);
+  if (word === "Jebron") {
+    image(video, 0, 0);
+    video.play()
+  } else {
+    video.pause()
+    video.hide()
+  }
+  
 }
 
 function mousePressed() {
@@ -58,7 +70,7 @@ function mousePressed() {
 
 function drawWord() {
   textAlign(CENTER);
-  word = random(answers)
+  word = random(answers);
 }
 
 function random(array) {
