@@ -19,8 +19,7 @@ var answers =
 "My sources say no.",
 "Outlook not so good.",
 "Very doubtful.",
-"You should probably ask Mob...",
-"Jebron"]
+"You should probably ask Mob..."]
 
 let word, txt, cnv, video;
 
